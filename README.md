@@ -36,8 +36,8 @@
 | Роль | Участник | GitHub |
 |---|---|---|
 | 🎓 Куратор | **Алкаев Владислав** | - |
-| 👤 Участник | **Евдакушин Илья Сергеевич** | [@username](https://github.com/username) |
-| 👤 Участник | **Федосов Артем Александрович** | [@username](https://github.com/username) |
+| 👤 Участник | **Евдакушин Илья Сергеевич** | [@isevdakushin](https://github.com/isevdakushin) |
+| 👤 Участник | **Федосов Артем Александрович** | [@fffedosofff](https://github.com/fffedosofff) |
 | 👤 Участник | **Александр** | [@username](https://github.com/username) |
 
 ---
