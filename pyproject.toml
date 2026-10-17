@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "futures-news-ta"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "kedro~=1.7.0",
+    "kedro-datasets[pandas-csvdataset]>=9.6,<10",
+    "numpy>=1.26",
+    "pandas>=2.0",
+    "scikit-learn>=1.5,<2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.kedro]
+package_name = "futures_news_ta"
+project_name = "Futures News and TA"
+kedro_init_version = "1.7.0"
+source_dir = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B"]
+
+[dependency-groups]
+dev = [
+    "jupyter",
+    "pre-commit>=4.4,<5",
+    "pytest>=8,<10",
+    "ruff>=0.17,<1",
+    "yfinance>=1.7.0",
+]
+
+[tool.kedro_telemetry]
+project_id = "bed21ecfeff2474a8b3ddee05d09af22"
