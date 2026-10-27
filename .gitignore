@@ -1,0 +1,23 @@
+# Local Kedro configuration and credentials
+conf/local/**
+!conf/local/.gitkeep
+conf/**/*credentials*
+
+# Generated datasets; keep the small example input
+data/**
+!data/**/
+!data/**/.gitkeep
+!data/01_raw/example_futures_prices.csv
+
+# Python and local tooling
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.ipynb_checkpoints/
+.viz/
+*.log
+mlruns/

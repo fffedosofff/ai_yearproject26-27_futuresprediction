@@ -106,7 +106,32 @@ gantt
 
 ```
 ├── README.md
+├── pyproject.toml              # зависимости и настройки Kedro, Ruff, pytest
+├── uv.lock                     # зафиксированные версии зависимостей
+├── conf/base/catalog.yml      # каталог данных Kedro
+├── data/                      # исходные и рассчитанные данные
+├── notebooks/                 # исследовательские ноутбуки
+├── src/futures_news_ta/       # код пайплайнов
+└── tests/                     # тесты
 ```
+
+## Запуск и проверки
+
+Команды выполняются из корня репозитория:
+
+```bash
+uv sync
+source .venv/bin/activate
+kedro run
+python -m ruff check .
+python -m ruff format --check .
+python -m pytest
+pre-commit install
+```
+
+В PowerShell вместо `source` используйте `.venv\Scripts\Activate.ps1`. Для запуска ноутбуков из этого же окружения выполните `jupyter lab` или выберите `.venv/bin/python` в редакторе. Примерный пайплайн использует искусственные цены и записывает результат в `data/04_feature/example_price_features.csv`.
+
+Git-хук запускает Ruff и pytest перед коммитом. Все проверки можно запустить вручную командой `pre-commit run --all-files` из активированного окружения.
 
 ---
 

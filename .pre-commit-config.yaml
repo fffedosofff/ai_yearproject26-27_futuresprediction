@@ -1,0 +1,19 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: Ruff lint
+        entry: uv run --no-sync python -m ruff check
+        language: unsupported
+        files: ^(src|tests)/.*\.py$
+      - id: ruff-format
+        name: Ruff format
+        entry: uv run --no-sync python -m ruff format --check
+        language: unsupported
+        files: ^(src|tests)/.*\.py$
+      - id: pytest
+        name: pytest
+        entry: uv run --no-sync python -m pytest -q tests
+        language: unsupported
+        files: ^(src/.*\.py|tests/.*\.py|pyproject\.toml)$
+        pass_filenames: false
