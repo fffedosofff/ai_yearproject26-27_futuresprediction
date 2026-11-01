@@ -1,0 +1,8 @@
+# Small synthetic dataset used only to demonstrate the Kedro structure.
+example_futures_prices:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/example_futures_prices.csv
+
+example_price_features:
+  type: pandas.CSVDataset
+  filepath: data/04_feature/example_price_features.csv
